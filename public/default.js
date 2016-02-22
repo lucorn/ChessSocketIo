@@ -1,3 +1,6 @@
+/* global Chess */
+/* global ChessBoard */
+/* global io */
 var board;
 var game;
 
@@ -8,8 +11,10 @@ window.onload = function () {
 var initGame = function() {
    var cfg = {
        draggable: true,
+       showNotation: false,
        position: 'start',
        onDrop: handleMove,
+       pieceTheme: 'img/chesspieces/chessnut/{piece}.png'
    };
 
    board = new ChessBoard('gameBoard', cfg);
